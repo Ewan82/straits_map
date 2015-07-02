@@ -100,7 +100,7 @@ def plot_transect(map, transects, samplength=50):
             lat1, lon1 = bng2latlon(tsect[x][0],tsect[x][1])
             lat2, lon2 = bng2latlon(tsect[x+1][0],tsect[x+1][1])
             (az12, az21, dist) = g.inv(lon1,lat1,lon2,lat2)
-            lonlats = g.npts(lon1, lat1, lon2, lat2, (dist/samplength))
+            lonlats = g.npts(lon1, lat1, lon2, lat2, int(dist/samplength))
 
             x1, y1 = map(lat1, lon1)
             x2, y2 = map(lat2, lon2)
