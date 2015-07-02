@@ -46,7 +46,7 @@ def latlonlist2bng(latlonl):
     """
     bnglist = []
     for x in latlonl:
-        bnglist.append(latlon2bng(x[0],x[1]))
+        bnglist.append(latlon2bng(x[1],x[0]))
     return bnglist
 
 def plot_points_bng(map, eastings, northings):
